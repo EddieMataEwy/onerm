@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>onerm</title>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register(
+        '/./assets/sw.js'
+      );
+    }
+  </script>
+  <link rel="manifest" href="/./assets/manifest.json">
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+</head>
+<body>
+  <div id="main"><script>window.hydrate_queue=[];window.dx_hydrate=(id,data)=>{const decoded=atob(data),bytes=Uint8Array.from(decoded,(c)=>c.charCodeAt(0));if(window.hydration_callback)window.hydration_callback(id,bytes);else window.hydrate_queue.push([id,bytes])};
+</script><!--node-id0-->Home test<!--#--><script>window.initial_dioxus_hydration_data="gYEY9g==";</script></div>
+  <script type="module">
+    import init from "/./wasm/onerm.js";
+    init("/./wasm/onerm_bg.wasm").then(wasm => {
+      if (wasm.__wbindgen_start == undefined) {
+        wasm.main();
+      }
+    });
+  </script>
+</body>
+</html>
