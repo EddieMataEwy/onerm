@@ -3,6 +3,13 @@
 # App (Project) Name
 name = "onerm"
 
+# Dioxus App Default Platform
+# desktop, web, mobile, ssr
+default_platform = "web"
+
+# `build` & `serve` dist path
+out_dir = "dist"
+
 [web.app]
 
 # HTML title tag content
@@ -12,7 +19,9 @@ title = "onerm"
 [web.resource]
 
 # Additional CSS style files
-style = []
+style = [
+  "./assets/chota.min.css"
+]
 
 # Additional JavaScript files
 script = []
