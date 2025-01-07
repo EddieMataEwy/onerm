@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>onerm</title>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register(
+        '/onerm/assets/sw.js'
+      );
+    }
+  </script>
+  <link rel="manifest" href="/onerm/assets/manifest.json">
+  <link rel="icon" type="image/x-icon" href="/onerm/assets/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/onerm/assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/onerm/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/onerm/assets/favicon-16x16.png">
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+<link rel="stylesheet" href="/onerm/assets/chota.min.css">
+<meta name="DIOXUS_ASSET_ROOT" content="onerm"></head>
+<body>
+  <div id="main"></div>
+  <script type="module">
+    import init from "/onerm/wasm/onerm.js";
+    init("/onerm/wasm/onerm_bg.wasm").then(wasm => {
+      if (wasm.__wbindgen_start == undefined) {
+        wasm.main();
+      }
+    });
+  </script>
+</body>
+</html>

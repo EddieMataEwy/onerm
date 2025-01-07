@@ -32,7 +32,7 @@ enum Route {
     Home,
 }
 
-static CSS: Asset = asset!("/assets/chota.min.css");
+// static CSS: Asset = asset!("./assets/chota.min.css");
 
 fn Home() -> Element {
     let mut weight = use_signal(|| 0.0);
@@ -63,7 +63,7 @@ fn Home() -> Element {
         }
     };
     rsx! {
-        document::Stylesheet { href: CSS }
+        // document::Stylesheet { href: CSS }
         br {  }
         div {
             class: "container",
@@ -73,30 +73,67 @@ fn Home() -> Element {
             }
             br{}
             div {
-                "Repetitions"
-            }
-            input {
-                type: "number",
-                oninput: set_reps,
-                value: "{reps}"
+                class: "row",
+                div {
+                    class: "col-4",
+                    "Repetitions"
+                }
+                div {
+                    class: "col-8",
+                    input {
+                        type: "number",
+                        oninput: set_reps,
+                        value: "{reps}"
+                    }
+                }
             }
             div {
-                "Weight"
-            }
-            input {
-                type: "number",
-                oninput: set_weight,
-                value: "{weight}"
+                class: "row",
+                div {
+                    class: "col-4",
+                    "Weight"
+                }
+                div {
+                    class: "col-8",
+                    input {
+                        type: "number",
+                        oninput: set_weight,
+                        value: "{weight}"
+                    }
+                }
             }
             br {}
             div {
-                "Your 1RM: {onerm:.2}"
-            }
-            for i in 0..30 {
+                class: "row",
                 div {
-                    "Weight: {calculate(i):.2}, Repetitions: {i+1}"
+                    class: "col",
+                    "Your 1RM: {onerm:.2}"
                 }
             }
+            br {}
+            for i in 0..30 {
+                div {
+                    class: "row bd-light",
+                    padding: "1rem 0rem",
+                    div {
+                        class: "col",
+                        margin: "0rem",
+                        div {
+                            class: "is-center",
+                            "Weight: {calculate(i):.2}"
+                        }
+                    }
+                    div {
+                        class: "col",
+                        margin: "0rem",
+                        div {
+                            class: "is-center",
+                            "Repetitions: {i+1}"
+                        }
+                    }
+                }
+            }
+            br {}
         }
     }
 }

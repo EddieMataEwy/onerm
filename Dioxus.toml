@@ -15,12 +15,14 @@ out_dir = "dist"
 # HTML title tag content
 title = "onerm"
 
+base_path = "onerm"
+
 # include `assets` in web platform
 [web.resource]
 
 # Additional CSS style files
 style = [
-  "./assets/chota.min.css"
+  "/onerm/assets/chota.min.css"
 ]
 
 # Additional JavaScript files
