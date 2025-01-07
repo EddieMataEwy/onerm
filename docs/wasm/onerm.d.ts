@@ -38,12 +38,6 @@ export type InitInput = RequestInfo | URL | Response | BufferSource | WebAssembl
 export interface InitOutput {
   readonly memory: WebAssembly.Memory;
   readonly main: (a: number, b: number) => number;
-  readonly __wbg_intounderlyingbytesource_free: (a: number, b: number) => void;
-  readonly intounderlyingbytesource_type: (a: number) => number;
-  readonly intounderlyingbytesource_autoAllocateChunkSize: (a: number) => number;
-  readonly intounderlyingbytesource_start: (a: number, b: any) => void;
-  readonly intounderlyingbytesource_pull: (a: number, b: any) => any;
-  readonly intounderlyingbytesource_cancel: (a: number) => void;
   readonly __wbg_intounderlyingsink_free: (a: number, b: number) => void;
   readonly intounderlyingsink_write: (a: number, b: any) => any;
   readonly intounderlyingsink_close: (a: number) => any;
@@ -51,6 +45,12 @@ export interface InitOutput {
   readonly __wbg_intounderlyingsource_free: (a: number, b: number) => void;
   readonly intounderlyingsource_pull: (a: number, b: any) => any;
   readonly intounderlyingsource_cancel: (a: number) => void;
+  readonly __wbg_intounderlyingbytesource_free: (a: number, b: number) => void;
+  readonly intounderlyingbytesource_type: (a: number) => number;
+  readonly intounderlyingbytesource_autoAllocateChunkSize: (a: number) => number;
+  readonly intounderlyingbytesource_start: (a: number, b: any) => void;
+  readonly intounderlyingbytesource_pull: (a: number, b: any) => any;
+  readonly intounderlyingbytesource_cancel: (a: number) => void;
   readonly __wbg_jsowner_free: (a: number, b: number) => void;
   readonly __wbindgen_malloc: (a: number, b: number) => number;
   readonly __wbindgen_realloc: (a: number, b: number, c: number, d: number) => number;
@@ -60,14 +60,12 @@ export interface InitOutput {
   readonly __wbindgen_free: (a: number, b: number, c: number) => void;
   readonly __externref_drop_slice: (a: number, b: number) => void;
   readonly __wbindgen_export_7: WebAssembly.Table;
-  readonly closure454_externref_shim: (a: number, b: number, c: any) => void;
-  readonly closure457_externref_shim: (a: number, b: number, c: number, d: number, e: any) => void;
-  readonly closure448_externref_shim: (a: number, b: number, c: any) => void;
-  readonly _dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h1ce3ba792e9d18cc: (a: number, b: number) => void;
-  readonly closure445_externref_shim: (a: number, b: number, c: any) => void;
-  readonly closure461_externref_shim: (a: number, b: number, c: any) => void;
-  readonly closure719_externref_shim: (a: number, b: number, c: any) => void;
-  readonly closure768_externref_shim: (a: number, b: number, c: any, d: any) => void;
+  readonly _ZN132__LT_dyn_u20_core__ops__function__FnMut_LT__LP__RP__GT__u2b_Output_u20__u3d__u20_R_u20_as_u20_wasm_bindgen__closure__WasmClosure_GT_8describe6invoke17hea6d5e6036986caaE: (a: number, b: number) => void;
+  readonly closure295_externref_shim: (a: number, b: number, c: number, d: number, e: any) => void;
+  readonly closure298_externref_shim: (a: number, b: number, c: any) => void;
+  readonly closure301_externref_shim: (a: number, b: number, c: any) => void;
+  readonly closure544_externref_shim: (a: number, b: number, c: any) => void;
+  readonly closure565_externref_shim: (a: number, b: number, c: any, d: any) => void;
   readonly __wbindgen_start: () => void;
 }
 
