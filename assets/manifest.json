@@ -19,11 +19,11 @@
       "purpose": "any"
     }
   ],
-  "start_url": "/",
-  "id": "/",
+  "start_url": "/onerm/",
+  "id": "/onerm/",
   "display": "standalone",
   "display_override": ["window-control-overlay", "standalone"],
-  "scope": "/",
+  "scope": "/onerm/",
   "theme_color": "#000000",
   "background_color": "#ffffff",
   "short_name": "1RM",
