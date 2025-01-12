@@ -13,7 +13,7 @@ fn Home() -> Element {
     let set_reps = move |event: Event<FormData>| {
         reps.set(event.parsed::<f64>().unwrap_or_else(|_| {0.}).round().abs() as i32);
         if reps.cloned() > 9 {
-            onerm.set(weight.cloned() * (0. + reps.cloned() as f64 / 30.));
+            onerm.set(weight.cloned() * (1. + reps.cloned() as f64 / 30.));
         } else {
             onerm.set(weight.cloned() / (1.0278 - reps.cloned() as f64 * 0.0278));
         }
