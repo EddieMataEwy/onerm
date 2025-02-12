@@ -13,7 +13,17 @@ var version = 'v1.0.0::';
 */
 var offlineFundamentals = [
   // add here the files you want to cache
-  'favicon.ico'
+  'favicon.ico',
+  'chota.min.css',
+  'apple-touch-icon.png',
+  'logo_512.png',
+  'logo_192.png',
+  'favicon-16x16.png',  
+  'favicon-32x32.png',  
+  'header.svg',
+  'mainfest.json',
+  'onerm-769a6539e2cfa293.js',
+  'onerm_bg-cc7570d1baf24432.wasm',
 ];
 
 /* The install event fires when the service worker is first installed.

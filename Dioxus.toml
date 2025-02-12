@@ -8,7 +8,9 @@ name = "onerm"
 default_platform = "web"
 
 # `build` & `serve` dist path
-out_dir = "dist"
+out_dir = ""
+
+asset_dir = "assets"
 
 [web.app]
 
@@ -16,20 +18,3 @@ out_dir = "dist"
 title = "onerm"
 
 base_path = "onerm"
-
-# include `assets` in web platform
-[web.resource]
-
-# Additional CSS style files
-style = [
-  "/onerm/assets/chota.min.css"
-]
-
-# Additional JavaScript files
-script = []
-
-[web.resource.dev]
-
-# Javascript code file
-# serve: [dev-server] only
-script = []

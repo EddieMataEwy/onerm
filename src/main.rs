@@ -6,6 +6,8 @@ fn main() {
     dioxus::launch(Home);
 }
 
+// static CSS: Asset = asset!("/assets/chota.min.css");
+
 fn Home() -> Element {
     let mut weight = use_signal(|| 0.0);
     let mut reps = use_signal(|| 1);
