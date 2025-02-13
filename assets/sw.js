@@ -22,8 +22,8 @@ var offlineFundamentals = [
   'favicon-32x32.png',  
   'header.svg',
   'manifest.json',
-  'onerm-d05305aff6579fb6.js'
-  // 'onerm_bg-82da7ea6ca2de9da.wasm',
+  'onerm-d05305aff6579fb6.js',
+  'onerm_bg-6e3e933e2186b5b7.wasm',
 ];
 
 /* The install event fires when the service worker is first installed.
