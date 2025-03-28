@@ -5,7 +5,7 @@
 /* A version number is useful when updating the worker logic,
    allowing you to remove outdated cache entries during the update.
 */
-var version = 'v1.0.1::';
+var version = 'v1.0.2::';
 
 /* These resources will be downloaded and cached by the service worker
    during the installation process. If any resource fails to be downloaded,
@@ -23,7 +23,7 @@ var offlineFundamentals = [
   'header.svg',
   'manifest.json',
   'onerm-d05305aff6579fb6.js',
-  'onerm_bg-6e3e933e2186b5b7.wasm',
+  'onerm_bg-89e9a8d4326b1b49.wasm',
 ];
 
 /* The install event fires when the service worker is first installed.

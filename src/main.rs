@@ -28,6 +28,22 @@ fn Home() -> Element {
             onerm.set(weight.cloned() / (1.0278 - reps.cloned() as f64 * 0.0278));
         }
     };
+    let convert_weight_to_lb = move |_| {
+        weight.set(weight() * 2.20462262185);
+        if reps.cloned() > 9 {
+            onerm.set(weight.cloned() * (1. + reps.cloned() as f64 / 30.));
+        } else {
+            onerm.set(weight.cloned() / (1.0278 - reps.cloned() as f64 * 0.0278));
+        }
+    };
+    let convert_weight_to_kg = move |_| {
+        weight.set(weight() / 2.20462262185);
+        if reps.cloned() > 9 {
+            onerm.set(weight.cloned() * (1. + reps.cloned() as f64 / 30.));
+        } else {
+            onerm.set(weight.cloned() / (1.0278 - reps.cloned() as f64 * 0.0278));
+        }
+    };
     let calculate = move |repetitions: usize| {
         let repetitions = repetitions + 1;
         if repetitions < 9 {
@@ -74,6 +90,20 @@ fn Home() -> Element {
                         oninput: set_weight,
                         value: "{weight}"
                     }
+                }
+            }
+            br {}
+            div {
+                class: "row",
+                a {
+                    class: "button",
+                    onclick: convert_weight_to_kg,
+                    "lb -> kg"
+                }
+                a {
+                    class: "button",
+                    onclick: convert_weight_to_lb,
+                    "kg -> lb"
                 }
             }
             br {}
